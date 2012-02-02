@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="23">
+      <Unit0>
+        <Filename Value="HaskellTool.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="HaskellTool"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="11" Y="8"/>
+        <UsageCount Value="58"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="main"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="125"/>
+        <CursorPos X="1" Y="140"/>
+        <UsageCount Value="58"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="console.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="console"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="19" Y="17"/>
+        <UsageCount Value="57"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="highlighthaskell.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="highlighthaskell"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="208"/>
+        <CursorPos X="37" Y="225"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../lazsvn/fixes_2_6/rtl/objpas/sysutils/sysstrh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="88"/>
+        <CursorPos X="10" Y="103"/>
+        <UsageCount Value="9"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../lazsvn/fixes_2_6/rtl/objpas/sysutils/sysstr.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="512"/>
+        <CursorPos X="30" Y="527"/>
+        <UsageCount Value="9"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="main.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="13"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../lazsvn/lazarus/trunk/lcl/comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="513"/>
+        <CursorPos X="14" Y="528"/>
+        <UsageCount Value="12"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../lazsvn/lazarus/trunk/lcl/include/pagecontrol.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="151"/>
+        <CursorPos X="3" Y="176"/>
+        <UsageCount Value="12"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../lazsvn/lazarus/trunk/components/synedit/synedit.pp"/>
+        <UnitName Value="SynEdit"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1768"/>
+        <CursorPos X="3" Y="1770"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../../lazsvn/lazarus/trunk/lcl/controls.pp"/>
+        <UnitName Value="Controls"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1438"/>
+        <CursorPos X="19" Y="1453"/>
+        <UsageCount Value="9"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../../lazsvn/lazarus/trunk/lcl/include/customcontrol.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="21"/>
+        <CursorPos X="3" Y="30"/>
+        <UsageCount Value="9"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../../lazsvn/lazarus/trunk/lcl/include/wincontrol.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="6343"/>
+        <CursorPos X="3" Y="6352"/>
+        <UsageCount Value="9"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../../lazsvn/lazarus/trunk/lcl/include/control.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4686"/>
+        <CursorPos X="4" Y="4704"/>
+        <UsageCount Value="9"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../../lazsvn/lazarus/trunk/lcl/lclclasses.pp"/>
+        <UnitName Value="LCLClasses"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="107"/>
+        <CursorPos X="3" Y="109"/>
+        <UsageCount Value="9"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../../lazsvn/fixes_2_6/rtl/objpas/classes/classesh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="101"/>
+        <CursorPos X="3" Y="116"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="../../lazsvn/fixes_2_6/rtl/objpas/classes/compon.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="454"/>
+        <CursorPos X="35" Y="457"/>
+        <UsageCount Value="9"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="../../lazsvn/lazarus/trunk/components/synedit/syneditkeycmds.pp"/>
+        <UnitName Value="SynEditKeyCmds"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="437"/>
+        <CursorPos X="1" Y="437"/>
+        <UsageCount Value="10"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../../lazsvn/lazarus/trunk/components/synedit/syneditstrconst.pp"/>
+        <UnitName Value="SynEditStrConst"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="../../lazsvn/lazarus/trunk/lcl/graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="269"/>
+        <CursorPos X="3" Y="284"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="../../lazsvn/lazarus/trunk/components/synedit/synhighlighterany.pas"/>
+        <UnitName Value="SynHighlighterAny"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1361"/>
+        <CursorPos X="1" Y="1390"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="../../lazsvn/lazarus/trunk/components/synedit/synedithighlighter.pp"/>
+        <UnitName Value="SynEditHighlighter"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="279"/>
+        <CursorPos X="15" Y="294"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../../lazsvn/lazarus/trunk/components/synedit/synhighlightercpp.pp"/>
+        <UnitName Value="SynHighlighterCpp"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="9"/>
+      </Unit22>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="243" Column="38" TopLine="237"/>
+      </Position1>
+      <Position2>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="129" Column="1" TopLine="120"/>
+      </Position2>
+      <Position3>
+        <Filename Value="main.pas"/>
+        <Caret Line="140" Column="1" TopLine="125"/>
+      </Position3>
+      <Position4>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="128" Column="1" TopLine="120"/>
+      </Position4>
+      <Position5>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="254" Column="22" TopLine="238"/>
+      </Position5>
+      <Position6>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="130" Column="56" TopLine="115"/>
+      </Position6>
+      <Position7>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="66" Column="41" TopLine="53"/>
+      </Position7>
+      <Position8>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="101" Column="11" TopLine="93"/>
+      </Position8>
+      <Position9>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="253" Column="57" TopLine="238"/>
+      </Position9>
+      <Position10>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="16" Column="13" TopLine="8"/>
+      </Position10>
+      <Position11>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="17" Column="14" TopLine="1"/>
+      </Position11>
+      <Position12>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="18" Column="11" TopLine="2"/>
+      </Position12>
+      <Position13>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="19" Column="12" TopLine="3"/>
+      </Position13>
+      <Position14>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="20" Column="11" TopLine="4"/>
+      </Position14>
+      <Position15>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="21" Column="10" TopLine="5"/>
+      </Position15>
+      <Position16>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="22" Column="10" TopLine="6"/>
+      </Position16>
+      <Position17>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="23" Column="12" TopLine="7"/>
+      </Position17>
+      <Position18>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="25" Column="10" TopLine="11"/>
+      </Position18>
+      <Position19>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="112" Column="1" TopLine="87"/>
+      </Position19>
+      <Position20>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="103" Column="19" TopLine="92"/>
+      </Position20>
+      <Position21>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="32" Column="1" TopLine="5"/>
+      </Position21>
+      <Position22>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="149" Column="1" TopLine="131"/>
+      </Position22>
+      <Position23>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="53" Column="78" TopLine="38"/>
+      </Position23>
+      <Position24>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="54" Column="84" TopLine="38"/>
+      </Position24>
+      <Position25>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="55" Column="74" TopLine="38"/>
+      </Position25>
+      <Position26>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="56" Column="76" TopLine="38"/>
+      </Position26>
+      <Position27>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="57" Column="72" TopLine="38"/>
+      </Position27>
+      <Position28>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="58" Column="72" TopLine="38"/>
+      </Position28>
+      <Position29>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="59" Column="76" TopLine="38"/>
+      </Position29>
+      <Position30>
+        <Filename Value="highlighthaskell.pas"/>
+        <Caret Line="228" Column="24" TopLine="215"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="2">
+      <Item1>
+        <Expression Value="FLineText"/>
+      </Item1>
+      <Item2>
+        <Expression Value="FTokenEnd"/>
+      </Item2>
+    </Watches>
+  </Debugging>
+</CONFIG>
