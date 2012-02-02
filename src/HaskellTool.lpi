@@ -91,12 +91,12 @@
     </Linking>
     <Other>
       <Verbosity>
-        <ShoLineNum Value="True"/>
         <ShowAllProcsOnError Value="True"/>
         <ShowSummary Value="True"/>
         <ShowHintsForUnusedUnitsInMainSrc Value="True"/>
       </Verbosity>
       <CompilerMessages>
+        <IgnoredMessages idx4055="True" idx5024="True"/>
         <UseMsgFile Value="True"/>
       </CompilerMessages>
       <CompilerPath Value="$(CompPath)"/>

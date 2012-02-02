@@ -13,6 +13,7 @@ type
 
   TConsole = class(TThread)
     constructor Create(ASynEdit: TSynEdit);
+    procedure Execute; override;
     procedure SendCommand(ACommand: String);
   strict protected
     Proc : TProcess;
@@ -25,7 +26,6 @@ type
     procedure StartProcess;
     procedure MoveToEnd;
     procedure SendLineToProc(ALine: String);
-    procedure Execute; override;
     procedure BufferIntoEdit;
   end;
 
@@ -60,7 +60,7 @@ procedure TConsole.StartProcess;
 begin
   Proc := TProcess.Create(nil);
   Proc.Options := [poUsePipes, poNoConsole, poStderrToOutPut];
-  Proc.CommandLine := 'ghci';
+  Proc.Executable := 'ghci';
   Proc.Execute;
 end;
 

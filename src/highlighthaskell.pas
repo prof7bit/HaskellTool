@@ -11,7 +11,6 @@ type
 
   TSynHaskell = class(TSynCustomHighlighter)
     constructor Create(AOwner: TComponent); override;
-    destructor Destroy; override;
 
   private
     FKeywordList: TFPHashList;
@@ -27,15 +26,16 @@ type
     FLineText: String;
     FTokenAttr: TSynHighlighterAttributes;
     FTokenPos, FTokenEnd: Integer;
-    FCurRange: Integer;
+    FCurRange: PtrInt;
 
     procedure SetupAttributes;
     procedure SetupKeywordList;
     function AddAttr(AName: String; AColor: TColor; AStyle: TFontStyles = []): TSynHighlighterAttributes;
-    function IsKeyword(const AWord: ShortString): Boolean;
+    function IsTokenKeyword(const AWord: ShortString): Boolean;
     procedure FindTokenEnd;
 
   public
+    destructor Destroy; override;
     procedure SetLine(const NewValue: String; LineNumber: Integer); override;
     procedure GetTokenEx(out TokenStart: PChar; out TokenLength: integer); override;
     function GetTokenAttribute: TSynHighlighterAttributes; override;
@@ -99,8 +99,6 @@ const
     );
 
 constructor TSynHaskell.Create(AOwner: TComponent);
-var
-  S : ShortString;
 begin
   inherited Create(AOwner);
   SetupKeywordList;
@@ -143,7 +141,7 @@ begin
   AddAttribute(Result);
 end;
 
-function TSynHaskell.IsKeyword(const AWord: ShortString): Boolean;
+function TSynHaskell.IsTokenKeyword(const AWord: ShortString): Boolean;
 begin
   Result := (FKeywordList.FindIndexOf(AWord) > -1);
 end;
@@ -342,7 +340,7 @@ end;
 
 function TSynHaskell.GetRange: Pointer;
 begin
-  Result := Pointer(PtrInt(FCurRange));
+  Result := Pointer(FCurRange);
 end;
 
 

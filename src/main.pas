@@ -5,9 +5,9 @@ unit main;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, SynEdit, SynEditKeyCmds, SynMemo,
+  Classes, SysUtils, FileUtil, SynEdit, SynEditKeyCmds,
   SynHighlighterAny, Forms, Controls, Graphics, Dialogs, ComCtrls, Menus,
-  ExtCtrls, PairSplitter, StdCtrls, Console, highlighthaskell;
+  ExtCtrls, Console, highlighthaskell;
 
 const
   C_ACTIVE = TColor($ffeedd);
@@ -20,7 +20,7 @@ type
   { TTabSheetEx }
 
   TTabSheetEx = class(TTabSheet)
-    constructor Create(AOwner: TComponent);
+    constructor Create(AOwner: TComponent); override;
     procedure OpenFile(AName: String);
     procedure SaveFile(AName: String);
     procedure SaveFile;
@@ -68,7 +68,6 @@ type
     procedure OpenFile(AFileName: String);
     procedure SetEditorColor(AColor: TColor);
   private
-    CurrentFileName : String;
     ConsoleWrapper: TConsole;
   public
     { public declarations }
@@ -134,8 +133,6 @@ end;
 { TForm1 }
 
 procedure TForm1.FormCreate(Sender: TObject);
-var
-  Tab : TTabSheet;
 begin
   Highlighter := TSynHaskell.Create(self);
 
