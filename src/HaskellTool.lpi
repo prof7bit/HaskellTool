@@ -65,7 +65,7 @@
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="HaskellTool"/>
+      <Filename Value="haskelltool"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>

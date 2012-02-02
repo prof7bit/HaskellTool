@@ -1,5 +1,10 @@
 # unneeded IDE session file
 *.lps
 
+# build files and binaries
+src/haskelltool
+src/lib
+*.res
+
 # joe's backup files
 *~
