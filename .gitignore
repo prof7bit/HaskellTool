@@ -1,0 +1,5 @@
+# unneeded IDE session file
+*.lps
+
+# joe's backup files
+*~
