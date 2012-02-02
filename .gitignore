@@ -6,5 +6,9 @@ src/haskelltool
 src/lib
 *.res
 
+# some other stuff
+*.tar.bz2
+src/dist
+
 # joe's backup files
 *~
