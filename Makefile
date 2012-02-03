@@ -1,12 +1,12 @@
 all:
-	lazbuild src/HaskellTool.lpr
-	
-clean:
-	rm -rf src/lib src/*.res src/haskelltool
+	${MAKE} -C src all
 	
 install:
-	install -s src/haskelltool /usr/local/bin/
+	${MAKE} -C src install
 	
 uninstall:
-	rm /usr/local/bin/haskelltool
+	${MAKE} -C src uninstall
+	
+clean:
+	${MAKE} -C src clean
 	
