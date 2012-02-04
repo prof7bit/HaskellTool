@@ -123,6 +123,8 @@ begin
   Ed.Options := Ed.Options - [eoScrollPastEol]
                            + [eoTabsToSpaces];
 
+  Ed.Gutter.MarksPart.Visible := False;
+
   Ed.Highlighter := Form1.Highlighter;
 end;
 
@@ -159,6 +161,8 @@ begin
   ConsoleEdit.Color := C_INACTIVE;
   ConsoleEdit.Font.Name := FONT_NAME;
   ConsoleEdit.Font.Size := FONT_SIZE;
+
+  ConsoleEdit.Gutter.MarksPart.Visible := False;
 
   AddTab('');
 end;
