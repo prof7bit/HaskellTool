@@ -1,5 +1,11 @@
+LAZ = $(shell which lazbuild)
+LAZ_MSG = lazbuild not found. You need to apt-get install lcl
+LAZ_ERROR = $(error $(LAZ_MSG))
+ASSERT_LAZ = $(if $(LAZ), , $(LAZ_ERROR))
+
 all:
-	lazbuild HaskellTool.lpr
+	${ASSERT_LAZ}
+	${LAZ} HaskellTool.lpr
 	
 clean:
 	rm -rf lib *.res haskelltool
