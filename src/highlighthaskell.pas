@@ -52,7 +52,7 @@ type
     procedure SetupAttributes;
     procedure SetupKeywordList;
     function AddAttr(AName: String; AColor: TColor; AStyle: TFontStyles = []): TSynHighlighterAttributes;
-    function IsTokenKeyword(const AWord: ShortString): Boolean;
+    function IsKeyword(const AKeyword: string): boolean; override;
     procedure FindTokenEnd;
 
   public
@@ -162,9 +162,9 @@ begin
   AddAttribute(Result);
 end;
 
-function TSynHaskell.IsTokenKeyword(const AWord: ShortString): Boolean;
+function TSynHaskell.IsKeyword(const AKeyword: string): boolean;
 begin
-  Result := (FKeywordList.FindIndexOf(AWord) > -1);
+  Result := (FKeywordList.FindIndexOf(AKeyword) > -1);
 end;
 
 procedure TSynHaskell.FindTokenEnd;
@@ -185,13 +185,20 @@ var
     until (FTokenEnd > l) or not (FLineText[FTokenEnd] in Chars) ;
   end;
 
-  function ScanUntil(a,b: Char): Boolean;
+  // scan until '{-' or '-}'
+  // this is only used when already insinde such
+  // a comment to determine whether anoter nested
+  // comment starts or the comment is ending
+  function ScanUntilComment: Boolean;
   begin
     Result := False;
     repeat
       inc(FTokenEnd);
-      if (FLineText[FTokenEnd-1] = a)
-      and (FLineText[FTokenEnd] = b)
+      if (FLineText[FTokenEnd-1] = '-')
+      and (FLineText[FTokenEnd] = '}')
+      then exit(True);
+      if (FLineText[FTokenEnd-1] = '{')
+      and (FLineText[FTokenEnd] = '-')
       then exit(True);
     until (FTokenEnd > l);
   end;
@@ -214,12 +221,15 @@ begin
     // of the next token or until we reach end of line)
 
     // range>0 means we are still inside a multi-line comment,
-    // just scan for -} until line end, nothing else matters
+    // scan until -} or {- or line end, nothing else matters
     if (FCurRange > 0) then begin
       FTokenAttr := FCommentAttri;
-      if ScanUntil('-','}') then begin
-        Dec(FCurRange); // found the end
-        Inc(FTokenEnd); // closing } is part of the token
+      if ScanUntilComment then begin
+        Inc(FTokenEnd);
+        if FLineText[FTokenEnd-2] = '{' then
+          Inc(FCurRange); // found the end
+        if FLineText[FTokenEnd-2] = '-' then
+          Dec(FCurRange); // found the end
       end;
     end
 
@@ -228,15 +238,8 @@ begin
     and (FLineText[FTokenPos+1] = '-')
     then begin
       FTokenAttr := FCommentAttri;
-      if not ScanUntil('-','}') then begin
-        // if we don't find the closing '-}' on the same line
-        // then we need to increment the range counter to
-        // remember this for the next lines
-        Inc(FCurRange);
-      end else begin
-        // closed on the same line.
-        Inc(FTokenEnd); // closing } is part of the token
-      end;
+      Inc(FCurRange);
+      Inc(FTokenEnd, 2);
     end
 
     else if (FLineText[FTokenPos] = '''')

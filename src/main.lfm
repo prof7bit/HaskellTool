@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 103
+  Left = 111
   Height = 546
-  Top = 120
+  Top = 143
   Width = 851
   Anchors = []
   Caption = 'Form1'

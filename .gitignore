@@ -9,6 +9,7 @@ src/lib
 # some other stuff
 *.tar.bz2
 src/dist
+src/test*.hs
 
 # joe's backup files
 *~
