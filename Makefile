@@ -1,12 +1,28 @@
+SUBDIRS = src
+SUBMAKE = $(foreach DIR, $(SUBDIRS), $(MAKE) $(MAKEFLAGS) -C $(DIR) $(1) &&) exit 0;
+
 all:
-	${MAKE} -C src all
+	$(call SUBMAKE, all)
+	@echo "\n\
+	Everything successfully built :-)\n\
+	You can now run the executable\n\
+	or install with\n\
+	\n\
+	    $$ sudo make install\n\
+	\n\
+	which will install to /usr/local\n\
+	or alternatively you might specify\n\
+	a different prefix:\n\
+	\n\
+	    $$ sudo make install PREFIX=/usr\n\
+	"
 	
 install:
-	${MAKE} -C src install
+	$(call SUBMAKE, install)
 	
 uninstall:
-	${MAKE} -C src uninstall
+	$(call SUBMAKE, uninstall)
 	
 clean:
-	${MAKE} -C src clean
+	$(call SUBMAKE, clean)
 

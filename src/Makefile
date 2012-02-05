@@ -1,20 +1,23 @@
+PREFIX_DEFAULT = /usr/local
 LPR = HaskellTool.lpr
 EXE = haskelltool
 LAZ = $(shell which lazbuild)
 ASSERT_LAZ = $(if $(LAZ), ,lazbuild_not_found)
+PREF = $(if $(PREFIX), $(PREFIX), $(PREFIX_DEFAULT))
 
-all: ${ASSERT_LAZ}
-	${LAZ} ${LPR}
-	@echo "*** ${EXE} successfully built :-)"
+all: $(ASSERT_LAZ)
+	$(LAZ) $(LPR)
+	@echo "*** $(EXE) successfully built :-)"
 	
 clean:
-	rm -rf lib *.res ${EXE}
+	rm -rf lib *.res $(EXE)
 	
 install:
-	install -s ${EXE} /usr/local/bin/
+	@echo $(PREF)
+	install -s $(EXE) $(PREF)/bin/
 	
 uninstall:
-	rm /usr/local/bin/${EXE}
+	rm $(PREF)/bin/$(EXE)
 	
 lazbuild_not_found:
 	@echo "\n\
