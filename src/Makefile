@@ -13,7 +13,6 @@ clean:
 	rm -rf lib *.res $(EXE)
 	
 install:
-	@echo $(PREF)
 	install -s $(EXE) $(PREF)/bin/
 	
 uninstall:
