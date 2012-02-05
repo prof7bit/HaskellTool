@@ -331,15 +331,18 @@ begin
   Result := FTokenPos - 1;
 end;
 
+{ This is called by synedit when it tries to find matching
+  brackets. They will only match if both brackets are inside
+  the same "Kind" of token. }
 function TSynHaskell.GetTokenKind: integer;
 var
   a: TSynHighlighterAttributes;
 begin
   a := GetTokenAttribute;
-  Result := 0;
-  if a = FSpaceAttri then Result := 1;
-  if a = FCommentAttri then Result := 2;
-  if a = FIdentifierAttri then Result := 3;
+  if a = FBracAttri then Result := 1
+  else if a = FCommentAttri then Result := 2
+  else if a = FStringAttri then Result := 3
+  else Result := 0;
 end;
 
 function TSynHaskell.GetDefaultAttribute(Index: integer): TSynHighlighterAttributes;
