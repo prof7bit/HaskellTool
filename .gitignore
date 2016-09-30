@@ -13,3 +13,4 @@ src/test*.hs
 
 # joe's backup files
 *~
+/.project
